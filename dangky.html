@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang đăng ký</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Body styling */
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url(img/c.jpg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #fff;
+    }
+
+    /* Fieldset and legend styling */
+    fieldset {
+        background: rgba(255, 255, 255, 0.8);
+        border: 2px solid #FF6666;
+        border-radius: 8px;
+        padding: 20px;
+        width: 500px;
+    }
+
+    legend {
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #FF6666;
+        margin-bottom: 20px;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    /* Form input styling */
+    label {
+        font-size: 20px;
+        margin-bottom: 20px;
+        display: block;
+        color: #333;
+    }
+
+    input[type="text"],
+    input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        font-size: 20px;
+    }
+
+    input[type="radio"] {
+        margin-right: 10px;
+    }
+
+    /* Styling submit and reset buttons */
+    input[type="submit"],
+    button[type="reset"] {
+        width: 48%;
+        padding: 15px;
+        border: none;
+        border-radius: 5px;
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #FF6666;
+        color: white;
+        margin-top: 8px;
+    }
+
+    /* Styling buttons on hover */
+    input[type="submit"]:hover,
+    button[type="reset"]:hover {
+        background-color: #FF4C4C;
+    }
+
+    /* Styling for gender section */
+    .gender-label {
+        margin-right: 15px;
+        font-size: 20px;
+    }
+
+    /* Input space adjustments */
+    div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+</style>
+</head>
+<body>
+<fieldset>
+    <legend>Đăng ký thành viên CLB lớp 12C6</legend>
+    <form action="noidung.html" >
+      <b>  <label for="hoten">Họ và tên</label></b>
+        <input type="text" name="hoten" required>
+
+      <b>  <label for="email">Email</label></b>
+        <input type="text" name="email" required>
+
+       <b> <label for="ngaysinh">Ngày sinh</label></b>
+        <input type="date" name="ngaysinh" required>
+        <b> <label for="diachi">Địa chỉ</label></b>
+        <input type="text" name="diachi" required>
+
+      <b>  <label for="gender">Giới tính</label></b>
+        <div>
+          <b>  <label class="gender-label"><input type="radio" name="gender"> Nam</label></b>
+           <b> <label class="gender-label"><input type="radio" name="gender"> Nữ</label></b>
+          <b> <label class="gender-label"><input type="radio" name="gender"> Khác</label></b>
+        </div>
+
+        <div>
+            <input type="submit" value="Gửi đăng ký">
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</fieldset>
+
+</body>
